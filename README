@@ -1,0 +1,45 @@
+nothing to say
+
+GIT操作
+添加远程分支
+git remote add origin test2
+
+下载远程分支
+
+git checkout --track origin/local # origin stand for remote branch name,local is locale branch name
+
+
+2013.7.31
+============================
+iptables 表和链
+三种模式，访问本机，本机访问其它，转发
+
+端口映射
+# 其它机器可以访问
+iptables -t nat -A PREROUTING --dport 80 -p tcp -j REDIRECT --to-ports 80
+# 本机访问本机
+iptables -t nat -A OUTPUT --dport 80 -p tcp -j REDIRECT --to-ports 80
+
+访问速度限制
+针对特别用户的限制
+
+2013.8.19
+===========================
+# add a branch from remote
+git checkout -b localbranchname origin/remotename
+
+# added local branch tracked remote
+git branch --set-upstram develop origin/develop
+
+# compare local branch with remote branch
+git diff HEAD...origin/develop
+
+2013.8.20
+==========================
+# seprate proxy config for a project
+vi .git/config
+add
+[http]
+    proxy=http://127.0.0.1:8087
+[https]
+    proxy=http://127.0.0.1:8087
