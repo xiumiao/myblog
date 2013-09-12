@@ -1,13 +1,14 @@
 #require 'pry'
 require 'sinatra/base'
 #require 'rack/webconsole'
-#require 'sinatra/contrib'
-require 'sinatra/content_for'
+require 'sinatra/contrib'
+#require 'sinatra/content_for'
 #require 'sinatra/reloader' if development?
 require_relative './storage'
 
 class MyApp < Sinatra::Base
-  register  Sinatra::ContentFor
+  helpers Sinatra::Contrib
+  register  Sinatra::Contrib
 
   get '/' do
     #binding.pry
