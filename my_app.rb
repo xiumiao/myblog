@@ -21,8 +21,9 @@ class MyApp < Sinatra::Base
   end
 
   post '/edit/:id.html' do
-
-    erb :editor
+    @page = Page.new(params[:id],"coolwar",params[:contents])
+    @page.save
+    redirect '/'
   end
 
   not_found do

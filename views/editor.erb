@@ -3,10 +3,8 @@
 <%end%>
 <div>
   <span>editor file</span>
-  <form>
-  <textarea class="span12" name="" rows="15">
-  </textarea>
-
+  <form action="/edit/<%=params[:id]%>.html" method="post">
+  <textarea class="span12" name="contents" rows="15"></textarea>
   <input type="submit" value="confirm" />
   <input type="reset" value="reset"/>
 </form>
