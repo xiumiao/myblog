@@ -51,10 +51,10 @@ module ActiveRecord
     def all
       @pstore ||= PStore.new("page.pstore")
       @pstore.transaction do
-      pages =  @pstore[:index]
-      pages.map do |page|
-        @pstore[page.to_sym]
-      end
+        pages =  @pstore[:index] || []
+        pages.map do |page|
+          @pstore[page.to_sym]
+        end
       end
     end
   end

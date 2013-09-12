@@ -1,20 +1,20 @@
 <% content_for :title do%>
-  title for test
+
 <% end %>
 <div class="row">
 
-<div class="span8">
+<div class="span9">
   <% @pages.reverse.each do |page| %>
   <article>
-  <h1><%=page[:title]%></h1>
-    <div><%=page[:created].strftime('%Y-%m-%d %I:%M') %></div>
+  <h3><%=page[:title]%></h3>
+    <div class="subtitle"><%=page[:created].strftime('%Y-%m-%d %I:%M') %></div>
     <p><%=@markdown.render(page[:contents])%><p>
   </article>
   <%end%>
 </div>
-<div class="span4">
+<div class="span3">
   <ul class="nav nav-list unstyled">
-    <li class="unstyled">list one</li>
+    <li class="unstyled">测试文章测试文章测试文章测试问</li>
     <li class="unstyled">list two</li>
     <li class="unstyled">list three</li>
   </ul>

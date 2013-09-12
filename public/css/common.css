@@ -1,0 +1,48 @@
+/* Base
+-------------------------------------------------- */
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+    color: #404040;
+    background-color: #EEEEEE;
+}
+article {
+    padding-left: 8px;
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+    border-radius: 5px ;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+article p {
+    line-height: 28px;
+}
+article .subtitle {
+    border-bottom: 1px dashed #cccccc;
+    padding-bottom: 2px;
+}
+
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+.footer p {
+    margin-bottom: 0;
+    color: #777;
+}
+.footer-links {
+    margin: 10px 0;
+}
+.footer-links li {
+    display: inline;
+    padding: 0 2px;
+}
+.footer-links li:first-child {
+    padding-left: 0;
+}
