@@ -7,8 +7,8 @@
   <% @pages.reverse.each do |page| %>
   <article>
   <h1><%=page[:title]%></h1>
-    <div><%=page[:created] %></div>
-    <p><%=page[:contents]%><p>
+    <div><%=page[:created].strftime('%Y-%m-%d %I:%M') %></div>
+    <p><%=@markdown.render(page[:contents])%><p>
   </article>
   <%end%>
 </div>

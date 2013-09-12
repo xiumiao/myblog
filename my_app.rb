@@ -1,9 +1,6 @@
-#require 'pry'
 require 'sinatra/base'
-#require 'rack/webconsole'
 require 'sinatra/contrib'
-#require 'sinatra/content_for'
-#require 'sinatra/reloader' if development?
+require 'redcarpet'
 require_relative './storage'
 
 class MyApp < Sinatra::Base
@@ -11,8 +8,9 @@ class MyApp < Sinatra::Base
   register  Sinatra::Contrib
 
   get '/' do
-    #binding.pry
+
     @pages = Page.all
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
     erb :index
   end
 
