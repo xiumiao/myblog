@@ -1,11 +1,13 @@
 <% content_for :title do %>
-  edit for <%=params[:id]%>
+  <title> edit for <%=params[:id]%></title>
 <%end%>
 <div>
   <span>editor file</span>
   <form action="/edit/<%=params[:id]%>.html" method="post">
+    <span>Title</span><input type="text" /></br>
+  <span>URL</span><input type="text" />
   <textarea class="span12" name="contents" rows="15"></textarea>
-  <input type="submit" value="confirm" />
-  <input type="reset" value="reset"/>
+  <input type="submit" value="提交" />
+  <input type="reset" value="重置"/>
 </form>
 </div>
