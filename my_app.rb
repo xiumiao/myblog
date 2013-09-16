@@ -14,12 +14,13 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
-  get '/edit/:id.html' do
+  get '/edit' do
     erb :editor
   end
 
-  post '/edit/:id.html' do
-    @page = Page.new(params[:id],"coolwar",params[:contents])
+  post '/edit' do
+    @page = Page.new(params[:title],"coolwar",params[:contents])
+    @page.url = params[:url]
     @page.save
     redirect '/'
   end

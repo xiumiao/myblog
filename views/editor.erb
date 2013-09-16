@@ -3,9 +3,9 @@
 <%end%>
 <div>
   <span>editor file</span>
-  <form action="/edit/<%=params[:id]%>.html" method="post">
-    <span>Title</span><input type="text" /></br>
-  <span>URL</span><input type="text" />
+  <form action="/edit" method="post">
+    <span>Title</span><input type="text" id="title" name="title"/></br>
+  <span>URL</span><input type="text" id="url" name="url" />
   <textarea class="span12" name="contents" rows="15"></textarea>
   <input type="submit" value="提交" />
   <input type="reset" value="重置"/>
